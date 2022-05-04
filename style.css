@@ -47,7 +47,7 @@ a {
     grid-area: 2 / 2 / 6 / 6;
     background-color: whitesmoke;
     display: grid;
-    grid-template: repeat(3,1fr) / repeat(2,1fr) .6fr;
+    grid-template: repeat(3,33%) / repeat(2,37%) 26%;
     padding: 2vw;
     gap: 1vw;
 }
@@ -72,6 +72,7 @@ a {
 }
 /* these sections do not get bigger when hovered on */
 #smaller1 , #smaller2 {
+    padding: .5vw 0 0 2.5vw;
     transform: scale(1);
 }
 /* make each project larger when hovering over it, and change border color*/
