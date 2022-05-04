@@ -1,0 +1,19 @@
+.container {
+    display: grid;
+    height: 96vh;
+    width: 99vw;
+    grid-template: repeat(5,1fr) / repeat(5,1fr);
+}
+
+.sidebar {
+    grid-area: 1 / 1 / 6 / 1;
+    border: 3px solid green;
+}
+.header {
+    grid-area: 1 / 2 / 2 / 6;
+    border: 3px solid red;
+}
+.maincontent {
+    grid-area: 2 / 2 / 6 / 6;
+    border: 3px solid blue;
+}
