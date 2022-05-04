@@ -57,6 +57,10 @@ a {
     border-radius: 10px;
     padding: 2vw;
     font-weight: 800;
+    /* add left border with same color as sidebar */
+    border-left-width: .7vh;
+    border-left-style: solid;
+    border-left-color: cornflowerblue;
 }
 /* section on right side of main content */
 #smaller1 {
@@ -70,9 +74,10 @@ a {
 #smaller1 , #smaller2 {
     transform: scale(1);
 }
-/* make each project larget when hovering over it */
+/* make each project larger when hovering over it, and change border color*/
 .maincontent > *:hover {
     transform: scale(1.02);
+    border-left-color:darksalmon;
 }
 /* make project description smaller text */
 .maincontent > * > p , #smaller1 > ol , #smaller2 > ul{
