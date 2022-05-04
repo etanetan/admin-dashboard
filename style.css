@@ -1,27 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
-
+/* use google font Mukta on the whole page */
 body {
     font-family: 'Mukta', sans-serif;
 }
-
+/* have links without blue and underlined */
+a {
+    text-decoration: none;
+    color: black;
+}
+/* container to divide page into each section */
 .container {
     display: grid;
-    height: 96vh;
+    height: 97vh;
     width: 99vw;
     grid-template: .8fr repeat(4,1fr) / .8fr repeat(4,1fr);
 }
-
+/* allocate sidebar grid area, change background, and make it a flex container*/
 .sidebar {
     grid-area: 1 / 1 / 6 / 1;
-    border: 1px solid green;
     background-color:cornflowerblue;
-
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     color: white;
     font-weight: 600;
 }
+/* sidebar split into two sections for menu items*/
 .sidebar .top, .bottom {
     display: flex;
     gap: 20px;
@@ -29,29 +33,54 @@ body {
     justify-content: space-around;
     margin-left: 3vw;
 }
+/* Dashboard title is larger than the rest and is above them */
 .dashboard {
     margin-left: 3vw;
     font-size: x-large;
 }
+/* allocate header grid area */
 .header {
     grid-area: 1 / 2 / 2 / 6;
-    border: 1px solid red;
 }
+/* allocate main content grid area and make it a grid container holding project info */
 .maincontent {
     grid-area: 2 / 2 / 6 / 6;
-    border: 1px solid blue;
     background-color: whitesmoke;
     display: grid;
     grid-template: repeat(3,1fr) / repeat(2,1fr) .6fr;
     padding: 2vw;
     gap: 1vw;
 }
+/* each project has its own section */
 .maincontent > * {
-    border: 1px solid black;
+    background-color: white;
     border-radius: 10px;
+    padding: 2vw;
+    font-weight: 800;
 }
-
-
+/* section on right side of main content */
+#smaller1 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+/* section on right side of main content */
+#smaller2 {
+    grid-area: 2 / 3 / 4 / 4
+}
+/* these sections do not get bigger when hovered on */
+#smaller1 , #smaller2 {
+    transform: scale(1);
+}
+/* make each project larget when hovering over it */
+.maincontent > *:hover {
+    transform: scale(1.02);
+}
+/* make project description smaller text */
+.maincontent > * > p , #smaller1 > ol , #smaller2 > ul{
+    font-weight: 200;
+    font-size: 14px;
+    color: gray;
+}
+/* add underline under section of sidebar that is being hovered */
 .sidebar > * > *:hover {
     text-decoration: underline;
 }
