@@ -8,6 +8,7 @@ a {
     text-decoration: none;
     color: black;
 }
+
 /* container to divide page into each section */
 .container {
     display: grid;
@@ -24,6 +25,7 @@ a {
     justify-content: space-evenly;
     color: white;
     font-weight: 600;
+    border-radius: 10px;
 }
 /* sidebar split into two sections for menu items*/
 .sidebar .top, .bottom {
@@ -41,7 +43,81 @@ a {
 /* allocate header grid area */
 .header {
     grid-area: 1 / 2 / 2 / 6;
+    display: grid;
+    grid-template: repeat(2,1fr) / repeat(3,1fr);
 }
+/* styling search bar properly, has a distinct background color */
+.header > input {
+    grid-area: 1 / 1 / 2 / 3;
+    width: 60%;
+    height: 2rem;
+    background: whitesmoke;
+    outline: none;
+    border: none;
+    border-radius: 1.625rem;
+    padding: 0 3.5rem 0 1.5rem;
+    font-size: 1rem;
+    margin: 1rem 0 0 2rem;
+    border-radius: 10px;
+}
+/* get rid of background of github image */
+a > img {
+    grid-area: 1 / 3 / 2 / 4;
+    mix-blend-mode: multiply;
+    margin: .25rem 0 0 10rem;
+    height: 6vh;
+    width: 3.5vw;
+}
+/* container to hold Github image and name */
+.hdcontainer {
+   display: flex;
+   gap: 1.5rem;
+   font-weight: 800;
+   align-items: center;
+   font-size: large;
+}
+/* container to hold welcome message */
+.lowercontainer {
+    grid-area: 2 / 1 / 3 / 3;
+    font-weight: 600;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    margin-bottom: .5rem;
+}
+/* have username in the theme color */
+b {
+    color: cornflowerblue;
+}
+/* make "hi there" have smaller font*/
+.lowercontainer > p {
+    font-size:x-small;
+}
+/* container to hold buttons below name in header */
+.btncontainer {
+    grid-area: 2 / 3 / 3 / 4;
+    display: flex;
+    gap: 2rem;
+    margin: .5rem .5rem .25rem 0;
+}
+/* buttons have theme color and are placed properly */
+.btncontainer > button {
+    font-size: .8rem;
+    font-weight: 800;
+    border: none;
+    background-color: cornflowerblue;
+    color: whitesmoke;
+    height: 70%;
+    width: 25%;
+    border-radius: 50px;
+}
+/* buttons swap text and background color on hover*/
+button:hover {
+    background-color: whitesmoke;
+    color: cornflowerblue;
+}
+
 /* allocate main content grid area and make it a grid container holding project info */
 .maincontent {
     grid-area: 2 / 2 / 6 / 6;
